@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Jeu de Songho</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Jeu de Songho</h1>
+
+  <!-- Plateau -->
+  <div id="board">
+    <div id="north" class="row"></div>
+    <div id="south" class="row"></div>
+  </div>
+
+  <!-- Scores -->
+  <p>Score Nord : <span id="score-north">0</span></p>
+  <p>Score Sud : <span id="score-south">0</span></p>
+
+  <!-- Compteur de tours -->
+  <p>Nombre de tours joués : <span id="turn-count">0</span></p>
+
+  <!-- Indicateur du joueur en cours -->
+  <p>Tour actuel : <span id="current-player">Sud</span></p>
+<!-- Bouton Reset -->
+<button onclick="resetGame()">Recommencer la partie</button>
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

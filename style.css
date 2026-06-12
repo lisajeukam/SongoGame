@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f0e6d2; /* couleur sable */
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #4b2e0f; /* brun foncé */
+}
+
+#board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #8b5a2b; /* bois */
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 20px #3e2a14;
+}
+
+.row {
+  display: flex;
+  margin: 10px;
+}
+
+.case {
+  width: 70px;
+  height: 70px;
+  margin: 8px;
+  background: radial-gradient(circle at center, #d9c2a3 40%, #8b5a2b 100%);
+  border: 3px solid #4b2e0f;
+  border-radius: 50%; /* forme trou */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #2e1a0f;
+  cursor: pointer;
+  box-shadow: inset 0 0 10px #3e2a14;
+}
+
+.case:hover {
+  background: radial-gradient(circle at center, #fff3d6 40%, #a67c52 100%);
+}/* Style des graines (billes) */
+.seed {
+  width: 12px;
+  height: 12px;
+  margin: 2px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: inset 0 0 3px #333;
+}
+
+/* Graines du camp Nord (rouges) */
+.north-seed {
+  background: radial-gradient(circle at center, #ff4444 40%, #aa0000 100%);
+}
+
+/* Graines du camp Sud (vertes) */
+.south-seed {
+  background: radial-gradient(circle at center, #44ff44 40%, #00aa00 100%);
+}/* Animation de rebond */
+@keyframes bounce {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.3); }
+  60%  { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+.seed {
+  width: 12px;
+  height: 12px;
+  margin: 2px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: inset 0 0 3px #333;
+  animation: bounce 0.4s ease; /* rebond à l'apparition */
+}
+
+.north-seed {
+  background: radial-gradient(circle at center, #ff4444 40%, #aa0000 100%);
+}
+
+.south-seed {
+  background: radial-gradient(circle at center, #44ff44 40%, #00aa00 100%);
+}
